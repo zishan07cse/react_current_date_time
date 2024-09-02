@@ -2,7 +2,9 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  const currDate = new Date().toLocaleDateString();
+  const currentDate = new Date();
+  const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
+  const currDate = currentDate.toLocaleDateString('en-GB', options); 
   const currTime = new Date().toLocaleTimeString();
 
   return (
